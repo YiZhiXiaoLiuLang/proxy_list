@@ -5,7 +5,7 @@ SOURCE_URL = "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/
 OUTPUT_FILE = "xray-config.json"
 
 # 限制导入的最大节点数量，防止节点过多导致系统句柄耗尽 (FD leak) 或 Xray 卡死
-MAX_PROXIES = 5000
+MAX_PROXIES = 100
 
 def fetch_proxies():
     resp = requests.get(SOURCE_URL, timeout=30)
