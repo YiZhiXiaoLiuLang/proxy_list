@@ -78,7 +78,7 @@
       "settings": {
         "servers": [
           {
-            "address": "174.64.199.82",
+            "address": "72.195.34.42",
             "port": 4145,
             "users": []
           }
@@ -97,6 +97,120 @@
       "settings": {
         "servers": [
           {
+            "address": "192.111.130.5",
+            "port": 17002,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-5",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.252.209.155",
+            "port": 14455,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-6",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.111.137.34",
+            "port": 18765,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.111.129.145",
+            "port": 16894,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-8",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.252.214.20",
+            "port": 15864,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-9",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.111.139.163",
+            "port": 19404,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-10",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
             "address": "72.195.34.35",
             "port": 27360,
             "users": []
@@ -111,7 +225,45 @@
       }
     },
     {
-      "tag": "proxy-5",
+      "tag": "proxy-11",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "98.178.72.21",
+            "port": 10919,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-12",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "184.178.172.25",
+            "port": 15291,
+            "users": []
+          }
+        ],
+        "version": 5
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpFastOpen": false
+        }
+      }
+    },
+    {
+      "tag": "proxy-13",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -130,7 +282,7 @@
       }
     },
     {
-      "tag": "proxy-6",
+      "tag": "proxy-14",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -149,7 +301,7 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-15",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -168,165 +320,13 @@
       }
     },
     {
-      "tag": "proxy-8",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "121.169.46.116",
-            "port": 1090,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-9",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "103.103.146.149",
-            "port": 7080,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-10",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "5.255.117.127",
-            "port": 1080,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-11",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "119.148.7.10",
-            "port": 22122,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-12",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "103.162.57.42",
-            "port": 1080,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-13",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "193.25.215.182",
-            "port": 22222,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-14",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.194.33.12",
-            "port": 30001,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
-      "tag": "proxy-15",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "220.158.232.118",
-            "port": 1080,
-            "users": []
-          }
-        ],
-        "version": 5
-      },
-      "streamSettings": {
-        "sockopt": {
-          "tcpFastOpen": false
-        }
-      }
-    },
-    {
       "tag": "proxy-16",
       "protocol": "socks",
       "settings": {
         "servers": [
           {
-            "address": "193.233.139.106",
-            "port": 1080,
+            "address": "184.170.249.65",
+            "port": 4145,
             "users": []
           }
         ],
@@ -344,8 +344,8 @@
       "settings": {
         "servers": [
           {
-            "address": "15.204.235.27",
-            "port": 1080,
+            "address": "70.166.167.38",
+            "port": 57728,
             "users": []
           }
         ],
@@ -363,8 +363,8 @@
       "settings": {
         "servers": [
           {
-            "address": "144.24.111.128",
-            "port": 1088,
+            "address": "198.8.94.174",
+            "port": 39078,
             "users": []
           }
         ],
@@ -382,8 +382,8 @@
       "settings": {
         "servers": [
           {
-            "address": "185.128.104.152",
-            "port": 8443,
+            "address": "174.75.211.193",
+            "port": 4145,
             "users": []
           }
         ],
@@ -401,7 +401,7 @@
       "settings": {
         "servers": [
           {
-            "address": "152.53.194.105",
+            "address": "103.163.244.106",
             "port": 1080,
             "users": []
           }
@@ -420,8 +420,8 @@
       "settings": {
         "servers": [
           {
-            "address": "43.160.255.142",
-            "port": 7890,
+            "address": "142.54.236.97",
+            "port": 4145,
             "users": []
           }
         ],
@@ -439,8 +439,8 @@
       "settings": {
         "servers": [
           {
-            "address": "147.45.60.246",
-            "port": 1082,
+            "address": "184.170.251.30",
+            "port": 11288,
             "users": []
           }
         ],
@@ -458,8 +458,8 @@
       "settings": {
         "servers": [
           {
-            "address": "101.36.104.239",
-            "port": 10808,
+            "address": "121.169.46.116",
+            "port": 1090,
             "users": []
           }
         ],
@@ -477,8 +477,8 @@
       "settings": {
         "servers": [
           {
-            "address": "123.58.219.171",
-            "port": 10808,
+            "address": "203.189.153.170",
+            "port": 1080,
             "users": []
           }
         ],
@@ -496,8 +496,8 @@
       "settings": {
         "servers": [
           {
-            "address": "101.36.104.46",
-            "port": 10808,
+            "address": "5.255.117.127",
+            "port": 1080,
             "users": []
           }
         ],
@@ -515,7 +515,7 @@
       "settings": {
         "servers": [
           {
-            "address": "109.123.251.109",
+            "address": "110.235.252.74",
             "port": 1080,
             "users": []
           }
@@ -534,8 +534,8 @@
       "settings": {
         "servers": [
           {
-            "address": "147.45.60.136",
-            "port": 1082,
+            "address": "202.62.55.95",
+            "port": 1080,
             "users": []
           }
         ],
@@ -553,8 +553,8 @@
       "settings": {
         "servers": [
           {
-            "address": "147.45.60.110",
-            "port": 1082,
+            "address": "43.230.193.154",
+            "port": 1080,
             "users": []
           }
         ],
@@ -572,8 +572,8 @@
       "settings": {
         "servers": [
           {
-            "address": "83.147.216.208",
-            "port": 1080,
+            "address": "119.148.7.10",
+            "port": 22122,
             "users": []
           }
         ],
@@ -591,8 +591,8 @@
       "settings": {
         "servers": [
           {
-            "address": "144.91.121.61",
-            "port": 1088,
+            "address": "202.62.52.20",
+            "port": 1080,
             "users": []
           }
         ],
@@ -610,8 +610,8 @@
       "settings": {
         "servers": [
           {
-            "address": "161.35.90.93",
-            "port": 1081,
+            "address": "124.248.191.83",
+            "port": 1080,
             "users": []
           }
         ],
@@ -629,8 +629,8 @@
       "settings": {
         "servers": [
           {
-            "address": "125.24.156.113",
-            "port": 7080,
+            "address": "103.191.218.119",
+            "port": 69,
             "users": []
           }
         ],
@@ -648,8 +648,8 @@
       "settings": {
         "servers": [
           {
-            "address": "103.96.233.10",
-            "port": 1080,
+            "address": "163.53.204.178",
+            "port": 9813,
             "users": []
           }
         ],
@@ -667,8 +667,8 @@
       "settings": {
         "servers": [
           {
-            "address": "213.27.29.153",
-            "port": 51000,
+            "address": "111.67.103.90",
+            "port": 1080,
             "users": []
           }
         ],
@@ -686,8 +686,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10924,
+            "address": "103.162.57.42",
+            "port": 1080,
             "users": []
           }
         ],
@@ -705,8 +705,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10916,
+            "address": "193.25.215.182",
+            "port": 22222,
             "users": []
           }
         ],
@@ -724,8 +724,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10928,
+            "address": "82.193.116.160",
+            "port": 21003,
             "users": []
           }
         ],
@@ -743,8 +743,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10932,
+            "address": "45.194.33.12",
+            "port": 30001,
             "users": []
           }
         ],
@@ -762,8 +762,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10919,
+            "address": "160.22.17.4",
+            "port": 9988,
             "users": []
           }
         ],
@@ -781,8 +781,8 @@
       "settings": {
         "servers": [
           {
-            "address": "103.239.201.50",
-            "port": 58765,
+            "address": "141.148.158.143",
+            "port": 1080,
             "users": []
           }
         ],
@@ -800,8 +800,8 @@
       "settings": {
         "servers": [
           {
-            "address": "65.21.252.66",
-            "port": 10811,
+            "address": "152.70.107.226",
+            "port": 1080,
             "users": []
           }
         ],
@@ -819,7 +819,7 @@
       "settings": {
         "servers": [
           {
-            "address": "77.239.106.24",
+            "address": "15.204.235.27",
             "port": 1080,
             "users": []
           }
@@ -838,7 +838,7 @@
       "settings": {
         "servers": [
           {
-            "address": "5.255.99.75",
+            "address": "158.220.101.43",
             "port": 1080,
             "users": []
           }
@@ -857,7 +857,7 @@
       "settings": {
         "servers": [
           {
-            "address": "5.255.103.55",
+            "address": "109.199.107.68",
             "port": 1080,
             "users": []
           }
@@ -876,7 +876,7 @@
       "settings": {
         "servers": [
           {
-            "address": "5.255.123.162",
+            "address": "167.86.79.35",
             "port": 1080,
             "users": []
           }
@@ -895,8 +895,8 @@
       "settings": {
         "servers": [
           {
-            "address": "111.119.162.248",
-            "port": 10929,
+            "address": "59.152.97.233",
+            "port": 1080,
             "users": []
           }
         ],
@@ -914,8 +914,8 @@
       "settings": {
         "servers": [
           {
-            "address": "103.36.11.18",
-            "port": 8199,
+            "address": "195.135.255.98",
+            "port": 1080,
             "users": []
           }
         ],
@@ -933,8 +933,8 @@
       "settings": {
         "servers": [
           {
-            "address": "5.104.206.191",
-            "port": 1080,
+            "address": "43.160.255.142",
+            "port": 7890,
             "users": []
           }
         ],
@@ -952,8 +952,8 @@
       "settings": {
         "servers": [
           {
-            "address": "5.255.117.250",
-            "port": 1080,
+            "address": "147.45.60.246",
+            "port": 1082,
             "users": []
           }
         ],
@@ -971,8 +971,8 @@
       "settings": {
         "servers": [
           {
-            "address": "5.255.113.177",
-            "port": 1080,
+            "address": "101.36.104.239",
+            "port": 10808,
             "users": []
           }
         ],
@@ -990,8 +990,8 @@
       "settings": {
         "servers": [
           {
-            "address": "103.248.47.230",
-            "port": 1080,
+            "address": "101.36.104.46",
+            "port": 10808,
             "users": []
           }
         ],
@@ -1009,8 +1009,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.30",
-            "port": 4257,
+            "address": "109.123.251.109",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1028,8 +1028,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.194.33.12",
-            "port": 30002,
+            "address": "178.130.47.21",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1047,8 +1047,8 @@
       "settings": {
         "servers": [
           {
-            "address": "49.13.22.249",
-            "port": 10801,
+            "address": "147.45.60.136",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1066,8 +1066,8 @@
       "settings": {
         "servers": [
           {
-            "address": "31.76.111.88",
-            "port": 1080,
+            "address": "147.45.60.124",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1085,8 +1085,8 @@
       "settings": {
         "servers": [
           {
-            "address": "49.13.22.249",
-            "port": 10808,
+            "address": "147.45.60.110",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1104,7 +1104,7 @@
       "settings": {
         "servers": [
           {
-            "address": "213.165.38.49",
+            "address": "79.137.196.250",
             "port": 1080,
             "users": []
           }
@@ -1123,8 +1123,8 @@
       "settings": {
         "servers": [
           {
-            "address": "5.75.133.113",
-            "port": 10801,
+            "address": "83.147.216.208",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1142,8 +1142,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.95.202.92",
-            "port": 10808,
+            "address": "194.127.179.9",
+            "port": 10806,
             "users": []
           }
         ],
@@ -1161,8 +1161,8 @@
       "settings": {
         "servers": [
           {
-            "address": "213.199.47.140",
-            "port": 1080,
+            "address": "45.179.145.12",
+            "port": 6080,
             "users": []
           }
         ],
@@ -1180,8 +1180,8 @@
       "settings": {
         "servers": [
           {
-            "address": "80.72.180.122",
-            "port": 1080,
+            "address": "109.172.55.177",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1199,8 +1199,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.30",
-            "port": 4107,
+            "address": "47.245.165.201",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1218,8 +1218,8 @@
       "settings": {
         "servers": [
           {
-            "address": "144.126.197.184",
-            "port": 1088,
+            "address": "191.223.220.23",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1237,7 +1237,7 @@
       "settings": {
         "servers": [
           {
-            "address": "185.222.138.237",
+            "address": "124.41.225.101",
             "port": 1080,
             "users": []
           }
@@ -1256,8 +1256,8 @@
       "settings": {
         "servers": [
           {
-            "address": "118.179.102.168",
-            "port": 9090,
+            "address": "47.238.236.151",
+            "port": 5555,
             "users": []
           }
         ],
@@ -1275,8 +1275,8 @@
       "settings": {
         "servers": [
           {
-            "address": "144.91.111.48",
-            "port": 1088,
+            "address": "46.173.26.104",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1294,8 +1294,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.32.160.61",
-            "port": 1088,
+            "address": "109.172.55.210",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1313,8 +1313,8 @@
       "settings": {
         "servers": [
           {
-            "address": "47.76.175.249",
-            "port": 1080,
+            "address": "109.172.55.227",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1332,8 +1332,8 @@
       "settings": {
         "servers": [
           {
-            "address": "89.110.98.72",
-            "port": 9050,
+            "address": "45.95.233.128",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1351,8 +1351,8 @@
       "settings": {
         "servers": [
           {
-            "address": "77.239.108.222",
-            "port": 11085,
+            "address": "144.91.121.61",
+            "port": 1088,
             "users": []
           }
         ],
@@ -1370,8 +1370,8 @@
       "settings": {
         "servers": [
           {
-            "address": "58.187.162.191",
-            "port": 1083,
+            "address": "149.248.21.106",
+            "port": 8080,
             "users": []
           }
         ],
@@ -1389,8 +1389,8 @@
       "settings": {
         "servers": [
           {
-            "address": "107.181.252.58",
-            "port": 1081,
+            "address": "93.123.118.15",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1408,7 +1408,7 @@
       "settings": {
         "servers": [
           {
-            "address": "108.174.152.80",
+            "address": "203.189.150.44",
             "port": 1080,
             "users": []
           }
@@ -1427,8 +1427,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.30",
-            "port": 5386,
+            "address": "161.35.90.93",
+            "port": 1082,
             "users": []
           }
         ],
@@ -1446,8 +1446,8 @@
       "settings": {
         "servers": [
           {
-            "address": "203.76.123.6",
-            "port": 1080,
+            "address": "95.211.190.26",
+            "port": 9100,
             "users": []
           }
         ],
@@ -1465,7 +1465,7 @@
       "settings": {
         "servers": [
           {
-            "address": "45.144.54.40",
+            "address": "129.151.128.225",
             "port": 1080,
             "users": []
           }
@@ -1484,8 +1484,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.30",
-            "port": 4132,
+            "address": "67.207.92.87",
+            "port": 1088,
             "users": []
           }
         ],
@@ -1503,8 +1503,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.42",
-            "port": 5487,
+            "address": "5.249.165.195",
+            "port": 20000,
             "users": []
           }
         ],
@@ -1522,8 +1522,8 @@
       "settings": {
         "servers": [
           {
-            "address": "180.165.49.4",
-            "port": 1088,
+            "address": "125.24.156.113",
+            "port": 7080,
             "users": []
           }
         ],
@@ -1541,8 +1541,8 @@
       "settings": {
         "servers": [
           {
-            "address": "51.210.5.144",
-            "port": 1088,
+            "address": "103.96.233.10",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1560,8 +1560,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.42",
-            "port": 4347,
+            "address": "158.101.8.92",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1579,8 +1579,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.42",
-            "port": 5015,
+            "address": "203.189.135.73",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1598,8 +1598,8 @@
       "settings": {
         "servers": [
           {
-            "address": "45.74.31.30",
-            "port": 34558,
+            "address": "103.206.68.241",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1617,8 +1617,8 @@
       "settings": {
         "servers": [
           {
-            "address": "193.23.200.117",
-            "port": 1082,
+            "address": "89.189.132.154",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1636,8 +1636,8 @@
       "settings": {
         "servers": [
           {
-            "address": "216.126.227.33",
-            "port": 1081,
+            "address": "103.9.185.33",
+            "port": 1080,
             "users": []
           }
         ],
@@ -1655,8 +1655,8 @@
       "settings": {
         "servers": [
           {
-            "address": "34.82.50.102",
-            "port": 1080,
+            "address": "103.239.201.50",
+            "port": 58765,
             "users": []
           }
         ],
@@ -1674,8 +1674,8 @@
       "settings": {
         "servers": [
           {
-            "address": "161.97.114.197",
-            "port": 1080,
+            "address": "168.253.92.93",
+            "port": 10808,
             "users": []
           }
         ],
@@ -1693,12 +1693,12 @@
       "settings": {
         "servers": [
           {
-            "address": "72.49.49.11",
-            "port": 31034,
+            "address": "217.12.209.4",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1712,12 +1712,12 @@
       "settings": {
         "servers": [
           {
-            "address": "72.195.114.184",
-            "port": 4145,
+            "address": "65.21.252.66",
+            "port": 10801,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1731,12 +1731,12 @@
       "settings": {
         "servers": [
           {
-            "address": "24.249.199.12",
-            "port": 4145,
+            "address": "37.204.230.182",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1750,12 +1750,12 @@
       "settings": {
         "servers": [
           {
-            "address": "174.77.111.196",
-            "port": 4145,
+            "address": "113.160.188.21",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1769,12 +1769,12 @@
       "settings": {
         "servers": [
           {
-            "address": "174.77.111.197",
-            "port": 4145,
+            "address": "65.21.252.66",
+            "port": 10808,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1788,12 +1788,12 @@
       "settings": {
         "servers": [
           {
-            "address": "72.195.34.58",
-            "port": 4145,
+            "address": "188.242.163.28",
+            "port": 21,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1807,12 +1807,12 @@
       "settings": {
         "servers": [
           {
-            "address": "184.181.217.210",
-            "port": 4145,
+            "address": "8.215.25.3",
+            "port": 2080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1826,12 +1826,12 @@
       "settings": {
         "servers": [
           {
-            "address": "184.178.172.14",
-            "port": 4145,
+            "address": "124.248.177.43",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1845,12 +1845,12 @@
       "settings": {
         "servers": [
           {
-            "address": "202.84.76.190",
-            "port": 5678,
+            "address": "77.239.106.24",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1864,12 +1864,12 @@
       "settings": {
         "servers": [
           {
-            "address": "98.188.47.132",
-            "port": 4145,
+            "address": "5.255.99.75",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1883,12 +1883,12 @@
       "settings": {
         "servers": [
           {
-            "address": "72.195.114.169",
-            "port": 4145,
+            "address": "5.255.103.55",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
@@ -1902,12 +1902,12 @@
       "settings": {
         "servers": [
           {
-            "address": "98.188.47.150",
-            "port": 4145,
+            "address": "5.255.123.162",
+            "port": 1080,
             "users": []
           }
         ],
-        "version": 4
+        "version": 5
       },
       "streamSettings": {
         "sockopt": {
