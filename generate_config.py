@@ -1,18 +1,72 @@
 import json
+import time
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE_URL = "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/all/data.json"
 OUTPUT_FILE = "xray-config.json"
 
-# 限制导入的最大节点数量，防止节点过多导致系统句柄耗尽 (FD leak) 或 Xray 卡死
-MAX_PROXIES = 100
+# 限制导入的最大可用节点数量
+MAX_PROXIES = 50
+# 验活并发线程数与单节点探测超时（秒）
+CHECK_WORKERS = 30
+CHECK_TIMEOUT = 5
+# 探测目标（204 状态码，开销最小）
+PROBE_URL = "http://cp.cloudflare.com/generate_204"
 
 def fetch_proxies():
     resp = requests.get(SOURCE_URL, timeout=30)
     resp.raise_for_status()
     data = resp.json()
-    # 优先选取较新的节点并做截断
-    return data[:MAX_PROXIES] if isinstance(data, list) else []
+    return data if isinstance(data, list) else []
+
+def check_single_proxy(item):
+    """
+    测试单个节点的可用性与延迟。
+    注意：测试 SOCKS 节点需要安装支持库：pip install "requests[socks]"
+    """
+    protocol = item.get("protocol")
+    ip = item.get("ip")
+    port = item.get("port")
+
+    if protocol not in ("http", "socks4", "socks5"):
+        return None
+
+    proxy_url = f"{protocol}://{ip}:{port}"
+    proxies = {
+        "http": proxy_url,
+        "https": proxy_url
+    }
+
+    start_time = time.time()
+    try:
+        r = requests.get(PROBE_URL, proxies=proxies, timeout=CHECK_TIMEOUT)
+        if r.status_code in (200, 204):
+            latency = round((time.time() - start_time) * 1000)
+            item["latency"] = latency
+            return item
+    except Exception:
+        pass
+    return None
+
+def filter_alive_proxies(proxies, max_count=MAX_PROXIES):
+    """并发检测所有节点，并按延迟升序截取最优节点"""
+    print(f"正在验活 {len(proxies)} 个候选节点（超时: {CHECK_TIMEOUT}s，并发: {CHECK_WORKERS}）...")
+    alive = []
+
+    with ThreadPoolExecutor(max_workers=CHECK_WORKERS) as executor:
+        futures = [executor.submit(check_single_proxy, item) for item in proxies]
+        for future in as_completed(futures):
+            res = future.result()
+            if res:
+                alive.append(res)
+                print(f"[ALIVE] {res['protocol']}://{res['ip']}:{res['port']} - {res['latency']}ms")
+
+    # 按探测延迟升序排序
+    alive.sort(key=lambda x: x["latency"])
+    selected = alive[:max_count]
+    print(f"验活完成：可用节点 {len(alive)} 个，选出最优前 {len(selected)} 个。")
+    return selected
 
 def build_xray_config(proxies):
     inbounds = [
@@ -60,7 +114,7 @@ def build_xray_config(proxies):
                 },
                 "streamSettings": {
                     "sockopt": {
-                        "tcpFastOpen": False  # 避免部分系统环境未支持 TFO 导致握手超时
+                        "tcpFastOpen": False
                     }
                 }
             }
@@ -69,13 +123,11 @@ def build_xray_config(proxies):
 
         outbounds.append(outbound)
 
-    # 直连兜底通道
     outbounds.append({
         "tag": "direct",
         "protocol": "freedom"
     })
 
-    # 关键修复 1：定义健康检查与探测模块，解决核心依赖解析失败问题
     observatory = {
         "subjectSelector": ["proxy-"],
         "probeUrl": "https://www.google.com/generate_204",
@@ -83,7 +135,6 @@ def build_xray_config(proxies):
         "enableConcurrency": True
     }
 
-    # 关键修复 2：使用 leastPing 代替 random，剔除失效死节点并优先低延迟
     balancers = [
         {
             "tag": "proxy-balancer",
@@ -105,26 +156,30 @@ def build_xray_config(proxies):
         "balancers": balancers
     }
 
-    config = {
+    return {
         "inbounds": inbounds,
         "outbounds": outbounds,
         "observatory": observatory,
         "routing": routing
     }
-    return config
 
 def main():
     try:
-        proxies = fetch_proxies()
-        if not proxies:
+        raw_proxies = fetch_proxies()
+        if not raw_proxies:
             print("No proxies fetched, exiting.")
             return
 
-        config = build_xray_config(proxies)
+        alive_proxies = filter_alive_proxies(raw_proxies, MAX_PROXIES)
+        if not alive_proxies:
+            print("No valid alive proxies found, exiting.")
+            return
+
+        config = build_xray_config(alive_proxies)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(config, f, indent=2)
 
-        print(f"Success: Config written to {OUTPUT_FILE} with {len(proxies)} proxies.")
+        print(f"Success: Config written to {OUTPUT_FILE} with {len(alive_proxies)} verified proxies.")
     except Exception as e:
         print(f"Error: {e}")
         exit(1)
