@@ -12,8 +12,11 @@ MAX_PROXIES = 50
 CHECK_WORKERS = 30
 CHECK_TIMEOUT = 6
 
-# 探测目标：访问 Google gstatic 根目录固定返回 404，能确实验证节点是否具备访问外网能力且无劫持
+# 校验目标：Google 官方根路径（真实访问且证书合法时必返回 404）
 PROBE_URL = "https://www.gstatic.com/"
+PROBE_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
 def fetch_proxies():
     resp = requests.get(SOURCE_URL, timeout=30)
@@ -23,9 +26,10 @@ def fetch_proxies():
 
 def check_single_proxy(item):
     """
-    测试单个节点。通过代理访问 https://www.gstatic.com/，
-    只有状态码严格为 404 才判定为真实有效的直连代理节点。
-    注意：测试 SOCKS 节点需要依赖：pip install "requests[socks]"
+    测试节点可用性：
+    1. 走 HTTPS 握手（自动过滤无法打通 TLS CONNECT 隧道的假节点）
+    2. 校验 SSL 证书（未关闭 verify，自动剔除拦截篡改/中间人伪造节点）
+    3. 严格匹配 Google gstatic 根路径返回的 404 状态码
     """
     protocol = item.get("protocol")
     ip = item.get("ip")
@@ -34,27 +38,20 @@ def check_single_proxy(item):
     if protocol not in ("http", "socks4", "socks5"):
         return None
 
-    # 对 socks5 推荐使用 socks5h 协议头，让 DNS 解析交由远端代理完成，避免本地 DNS 污染
-    proto_prefix = "socks5h" if protocol == "socks5" else protocol
-    proxy_url = f"{proto_prefix}://{ip}:{port}"
+    proxy_url = f"{protocol}://{ip}:{port}"
     proxies = {
         "http": proxy_url,
         "https": proxy_url
     }
 
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-
     start_time = time.time()
     try:
-        # verify=True 校验 Google 的真实 SSL 证书，防止中间人伪造
         r = requests.get(
             PROBE_URL,
             proxies=proxies,
-            headers=headers,
+            headers=PROBE_HEADERS,
             timeout=CHECK_TIMEOUT,
-            verify=True
+            verify=True  # 严格校验证书合法性
         )
         if r.status_code == 404:
             latency = round((time.time() - start_time) * 1000)
@@ -65,8 +62,8 @@ def check_single_proxy(item):
     return None
 
 def filter_alive_proxies(proxies, max_count=MAX_PROXIES):
-    """并发检测所有节点，并按延迟升序截取最优节点"""
-    print(f"正在验活 {len(proxies)} 个候选节点（超时: {CHECK_TIMEOUT}s，并发: {CHECK_WORKERS}）...")
+    """并发检测节点真实性，并按延迟升序截取最优节点"""
+    print(f"正在验活 {len(proxies)} 个节点（目标: {PROBE_URL} -> 404，超时: {CHECK_TIMEOUT}s）...")
     alive = []
 
     with ThreadPoolExecutor(max_workers=CHECK_WORKERS) as executor:
@@ -75,20 +72,14 @@ def filter_alive_proxies(proxies, max_count=MAX_PROXIES):
             res = future.result()
             if res:
                 alive.append(res)
-                print(f"[VALID] {res['protocol']}://{res['ip']}:{res['port']} - {res['latency']}ms")
+                print(f"[ALIVE] {res['protocol']}://{res['ip']}:{res['port']} - {res['latency']}ms")
 
-    # 按探测延迟升序排序
     alive.sort(key=lambda x: x["latency"])
     selected = alive[:max_count]
-    print(f"验活完成：可用真实节点 {len(alive)} 个，写入前 {len(selected)} 个最优节点。")
+    print(f"验活完成：真实可用节点 {len(alive)} 个，提取前 {len(selected)} 个。")
     return selected
 
 def build_xray_config(proxies):
-    # 顶层日志配置
-    log = {
-        "loglevel": "warning"
-    }
-
     inbounds = [
         {
             "port": 1080,
@@ -143,6 +134,7 @@ def build_xray_config(proxies):
 
         outbounds.append(outbound)
 
+    # 兜底直连
     outbounds.append({
         "tag": "direct",
         "protocol": "freedom"
@@ -176,8 +168,11 @@ def build_xray_config(proxies):
         "balancers": balancers
     }
 
+    # 包含顶层 log 配置
     return {
-        "log": log,
+        "log": {
+            "loglevel": "warning"
+        },
         "inbounds": inbounds,
         "outbounds": outbounds,
         "observatory": observatory,
@@ -193,7 +188,7 @@ def main():
 
         alive_proxies = filter_alive_proxies(raw_proxies, MAX_PROXIES)
         if not alive_proxies:
-            print("No valid proxies passed gstatic 404 check, exiting.")
+            print("No valid alive proxies found, exiting.")
             return
 
         config = build_xray_config(alive_proxies)
