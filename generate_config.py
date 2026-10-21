@@ -3,7 +3,7 @@ import time
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-SOURCE_URL = "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/all/data.json"
+SOURCE_URL = "https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/protocols/http/data.json"
 OUTPUT_FILE = "xray-config.json"
 
 # 限制导入的最大可用节点数量
