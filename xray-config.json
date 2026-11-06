@@ -24,7 +24,7 @@
       "settings": {
         "servers": [
           {
-            "address": "138.68.60.8",
+            "address": "198.199.86.11",
             "port": 3128
           }
         ]
@@ -36,62 +36,14 @@
       "settings": {
         "servers": [
           {
-            "address": "47.254.122.220",
-            "port": 5443
+            "address": "209.97.150.167",
+            "port": 3128
           }
         ]
       }
     },
     {
       "tag": "proxy-2",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "34.43.46.91",
-            "port": 443
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-3",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "34.43.46.91",
-            "port": 80
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-4",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "155.138.236.211",
-            "port": 18080
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-5",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "165.154.162.73",
-            "port": 8888
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-6",
       "protocol": "http",
       "settings": {
         "servers": [
@@ -103,127 +55,19 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-3",
       "protocol": "http",
       "settings": {
         "servers": [
           {
-            "address": "198.199.86.11",
-            "port": 3128
+            "address": "34.43.46.91",
+            "port": 443
           }
         ]
       }
     },
     {
-      "tag": "proxy-8",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "82.152.138.127",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-9",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "209.97.150.167",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-10",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "38.58.66.167",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-11",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "104.219.55.50",
-            "port": 8118
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-12",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "187.251.230.15",
-            "port": 8080
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-13",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "200.26.184.32",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-14",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "148.230.227.138",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-15",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "139.162.78.109",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-16",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "139.162.78.109",
-            "port": 80
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-17",
+      "tag": "proxy-4",
       "protocol": "http",
       "settings": {
         "servers": [
@@ -235,13 +79,169 @@
       }
     },
     {
+      "tag": "proxy-5",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.57.65.195",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-6",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "23.94.68.53",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-7",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "200.26.184.32",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-8",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "138.68.60.8",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-9",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.156.23.27",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-10",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.36.237.230",
+            "port": 8080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-11",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.203.0.142",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-12",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "34.105.252.3",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-13",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "134.209.29.120",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-14",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "45.61.133.104",
+            "port": 7777
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-15",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "85.234.158.253",
+            "port": 5002
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-16",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "161.22.33.169",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-17",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.180.18.103",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
       "tag": "proxy-18",
       "protocol": "http",
       "settings": {
         "servers": [
           {
-            "address": "172.245.168.179",
-            "port": 21241
+            "address": "190.0.246.211",
+            "port": 4040
           }
         ]
       }
@@ -252,7 +252,7 @@
       "settings": {
         "servers": [
           {
-            "address": "190.0.246.213",
+            "address": "131.221.40.131",
             "port": 4040
           }
         ]
@@ -264,7 +264,7 @@
       "settings": {
         "servers": [
           {
-            "address": "190.0.246.211",
+            "address": "190.0.246.213",
             "port": 4040
           }
         ]
@@ -300,254 +300,14 @@
       "settings": {
         "servers": [
           {
-            "address": "186.148.180.133",
-            "port": 999
+            "address": "130.61.148.213",
+            "port": 8888
           }
         ]
       }
     },
     {
       "tag": "proxy-24",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "131.221.40.131",
-            "port": 4040
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-25",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "179.1.196.133",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-26",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "201.79.50.139",
-            "port": 10000
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-27",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "104.194.146.9",
-            "port": 80
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-28",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "149.130.173.58",
-            "port": 9443
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-29",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "209.14.115.109",
-            "port": 9999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-30",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.43.60.220",
-            "port": 8080
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-31",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "134.209.29.120",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-32",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "38.211.68.83",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-33",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "94.76.224.104",
-            "port": 5002
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-34",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "63.175.157.2",
-            "port": 30005
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-35",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.65.138.48",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-36",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "38.180.18.103",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-37",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "220.135.222.226",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-38",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "177.234.211.194",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-39",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.232.210.193",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-40",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.65.137.218",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-41",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "34.96.238.40",
-            "port": 8080
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-42",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "190.12.150.244",
-            "port": 999
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-43",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "118.193.37.78",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-44",
       "protocol": "http",
       "settings": {
         "servers": [
@@ -559,19 +319,7 @@
       }
     },
     {
-      "tag": "proxy-45",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "119.28.233.241",
-            "port": 3128
-          }
-        ]
-      }
-    },
-    {
-      "tag": "proxy-46",
+      "tag": "proxy-25",
       "protocol": "http",
       "settings": {
         "servers": [
@@ -583,19 +331,19 @@
       }
     },
     {
-      "tag": "proxy-47",
+      "tag": "proxy-26",
       "protocol": "http",
       "settings": {
         "servers": [
           {
-            "address": "45.9.72.212",
-            "port": 2080
+            "address": "82.67.114.12",
+            "port": 8888
           }
         ]
       }
     },
     {
-      "tag": "proxy-48",
+      "tag": "proxy-27",
       "protocol": "http",
       "settings": {
         "servers": [
@@ -607,13 +355,265 @@
       }
     },
     {
+      "tag": "proxy-28",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "163.172.232.12",
+            "port": 8080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-29",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "144.124.251.24",
+            "port": 10829
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-30",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "181.205.205.170",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-31",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "144.124.251.24",
+            "port": 10492
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-32",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "190.71.72.85",
+            "port": 2525
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-33",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "178.83.46.167",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-34",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "78.134.20.48",
+            "port": 8080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-35",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "144.124.251.24",
+            "port": 10084
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-36",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "190.12.150.244",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-37",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "209.14.115.109",
+            "port": 9999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-38",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "45.65.138.48",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-39",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "45.65.137.218",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-40",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "177.234.211.63",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-41",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.63.98.55",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-42",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.172.129.168",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-43",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "38.211.76.145",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-44",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "194.55.234.58",
+            "port": 8080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-45",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "64.76.106.119",
+            "port": 999
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-46",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "149.56.110.145",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-47",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "188.225.37.219",
+            "port": 3128
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy-48",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "41.196.16.231",
+            "port": 1976
+          }
+        ]
+      }
+    },
+    {
       "tag": "proxy-49",
       "protocol": "http",
       "settings": {
         "servers": [
           {
-            "address": "164.92.105.30",
-            "port": 1080
+            "address": "45.189.57.114",
+            "port": 3129
           }
         ]
       }
